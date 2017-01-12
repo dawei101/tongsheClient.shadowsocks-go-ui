@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>铜蛇</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body ng-app="tsapp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">您正在使用<strong>古董级</strong>浏览器. 请<a href="http://browsehappy.com/">升级浏览器</a> 提高体验.</p>
+    <![endif]-->
+    <div class="">
+        <div class="ui-base">
+            <div class="dashboard-page">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-3 col-md-2 col-xs-12 sidebar">
+                    <div class="text-center">
+                      <img src="/images/logo175x175.png" class="user-avatar" /><br />
+                    </div>
+                    <ul class="nav nav-sidebar">
+                      <li ng-class="{active: $state.includes('settings')}"><a ui-sref="settings">设置</a></li>
+                      <li ng-class="{active: $state.includes('about')}"><a ui-sref="about">关于铜蛇</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-xs-12 col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ui-view> </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <!--[if lt IE 9]>
+    <script src="/vendor/es5-shim.min.js"></script>
+    <script src="/vendor/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- bower:js -->
+    <script src="/vendor/angular.min.js"></script>
+    <script src="/vendor/angular-ui-router.min.js"></script>
+    <script src="/vendor/angular-animate.min.js"></script>
+    <!-- endbower -->
+    <script src="/app.js"></script>
+  </body>
+</html>

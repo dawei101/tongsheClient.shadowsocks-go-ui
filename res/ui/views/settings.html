@@ -1,0 +1,120 @@
+<div>
+	<h2>设置</h2>
+	<div class="jumbotron">
+		<div class="container">
+            <h3>Shadowsocks账号</h3>
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                   <table class="table">
+                        <tbody>
+                            <tr class="shadowsocks" ng-repeat="ss in shadowsocks">
+                                <td>
+                                    <span>{{ss}}</span>
+                                    <span class="edit">
+                                        <input type="text" class="form-control" value="{{ss}}" placeholder="ss://encryption_method:password@ip:port" />
+                                        <p class="error text-danger text-right hide"></p>
+                                    </span>
+                                </td>
+                                <td class="text-right">
+                                    <span>
+                                        <a ng-click="ssAction.edit($event)" href="#">编辑</a> | <a href="#" ng-click="ssAction.delete(ss)">删除</a>
+                                    </span>
+                                    <span class="edit">
+                                        <a ng-click="ssAction.save($event, ss)" class="btn btn-danger btn-outline btn-rounded">保存</a>
+                                        <a ng-click="ssAction.cancel($event)" class="btn btn-default btn-outline btn-rounded">取消</a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="form-control" placeholder="ss://encryption_method:password@ip:port" />
+                                    <div class="error text-danger text-right hide"></div>
+                                </td>
+                                <td class="text-right">
+                                    <a ng-click="ssAction.add($event)" class="btn btn-danger btn-outline btn-rounded">添加</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                   </table>
+                </div>
+            </div>
+            <h3>一般设置</h3>
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    童锁(屏蔽不健康网站)
+                                </td>
+                                <td>
+                                    <div class="switch-group pull-right">
+                                        <input type="checkbox" 
+                                            ng-click="toggle('child_lock')"
+                                            ng-checked="config.child_lock=='on'"
+                                            id="child_lock" name="child_lock" />
+                                        <label for="child_lock"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    全局模式
+                                </td>
+                                <td>
+                                    <div class="switch-group pull-right">
+                                        <input type="checkbox"
+                                            ng-click="toggle('is_global')"
+                                            ng-checked="config.is_global=='on'"
+                                            id="is_global" name="is_global" />
+                                        <label for="is_global"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr class="hide">
+                                <td>npm使用代理</td>
+                                <td>
+                                    <div class="switch-group pull-right">
+                                        <input type="checkbox"
+                                            checked="checked"
+                                            ng-click="toggle('npm')"
+                                            ng-model="config.npm"
+                                            ng-checked="config.npm=='on'"
+                                            id="npm" name="npm" />
+                                        <label for="npm"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <h3>手动设置代理</h3>
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td> socks5代理 </td>
+                                <td class="text-right"> 127.0.0.1:1271 </td>
+                            </tr>
+                            <tr>
+                                <td> http代理 </td>
+                                <td class="text-right"> 127.0.0.1:1272 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <h3>自定义走代理的域名</h3>
+            <form class="form text-center">
+                <textarea name="diy_domains" class="form-control" rows="3" placeholder="youtube.com,12.12.12.12">{{config.diy_domains}}</textarea>
+                <a ng-click="setDiyDomains()" class="btn btn-danger btn-lg btn-outline btn-rounded">保存并生效</a>
+            </form>
+		</div>
+	</div>
+</div>
