@@ -89,11 +89,18 @@ func getPac(w http.ResponseWriter, r *http.Request) {
 		SocksProxy,
 		SocksProxy)
 	// TODO
+	config, _ := LoadConfig()
+	dds := config.Get("diy_domains")
+	dms := []string{}
+	if len(dds) > 0 {
+		dms = strings.Split(dds, ",")
+	}
+	dmsJson, _ := json.Marshal(dms)
+
 	s := strings.Replace(string(bt), "__PROXY__", proxy, -1)
-	s = strings.Replace(s, "__DOMAINS__", "[]", -1)
+	s = strings.Replace(s, "__DOMAINS__", string(dmsJson), -1)
 	isGs := "false"
 
-	config, _ := LoadConfig()
 	global := config.Get("is_global") == "on"
 	if global {
 		isGs = "true"
