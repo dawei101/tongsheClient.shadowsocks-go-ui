@@ -1,7 +1,8 @@
 #####
 # bind data generation file
 
-bindata.go
+src/
+bin/
 
 
 ###################### golang 
