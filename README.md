@@ -2,8 +2,9 @@
 铜蛇 shadowsocks ui
 ======================
 
+
+
 Inspired by lantern
-灵感来自于蓝灯
 
 This version of shadowsocks client is totally writen in golang,  it's core of shadowsocks is [shadowsocks-go](https://github.com/shadowsocks/shadowsocks-go).
 
@@ -18,6 +19,7 @@ Code is a little mess with the reason of a first time usage of golang, let's ref
 Welcome guys fork and push some contribution.
 
 ------
+灵感来自于蓝灯
 
 这个版本的客户端完全适用golang编写，shadowsocks核心来自[shadowsocks-go](https://github.com/shadowsocks/shadowsocks-go).
 
@@ -27,5 +29,6 @@ Welcome guys fork and push some contribution.
 
 代码有点凌乱，因为第一次用golang出作品，大家都来重构吧。
 
-
 欢迎大家fork并提交贡献。
+
+![image](https://cloud.githubusercontent.com/assets/2274609/21919801/26386c9e-d998-11e6-8d97-1edd65e72bc6.png)
