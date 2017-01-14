@@ -84,9 +84,9 @@ func getPac(w http.ResponseWriter, r *http.Request) {
 	bt := GetRes("pac.tpl")
 	var proxy string
 	if runtime.GOOS == "windows" {
-		proxy = fmt.Sprintf("SOCKS5 %s; SOCKS %s; DIRECT;", GetSocksProxy(), GetSocksProxy())
-	} else {
 		proxy = fmt.Sprintf("PROXY %s; DIRECT;", GetHttpProxy())
+	} else {
+		proxy = fmt.Sprintf("SOCKS5 %s; SOCKS %s; DIRECT;", GetSocksProxy(), GetSocksProxy())
 	}
 	config, _ := LoadConfig()
 	dds := config.Get("diy_domains")

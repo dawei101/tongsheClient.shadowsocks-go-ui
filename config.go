@@ -325,7 +325,7 @@ func GetSocksProxy() string {
 
 func GetHttpProxy() string {
 	//TODO add sharing feature
-	return fmt.Sprintf("%s:%d;", "127.0.0.1", httpProxy)
+	return fmt.Sprintf("%s:%d;", "127.0.0.1", httpProxyPort)
 }
 
 func GetManagementAddr() string {
