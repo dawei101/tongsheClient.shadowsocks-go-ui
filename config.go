@@ -319,11 +319,13 @@ func UnsetPac() {
 }
 
 func GetSocksProxy() string {
-	return fmt.Sprintf("SOCKS5 127.0.0.1:%d; SOCKS 127.0.0.1:%d; DIRECT;", ssPort, ssPort)
+	//TODO add sharing feature
+	return fmt.Sprintf("%s:%d;", "127.0.0.1", ssPort)
 }
 
 func GetHttpProxy() string {
-	return fmt.Sprintf("PROXY 127.0.0.1:%d; DIRECT;", httpProxyPort)
+	//TODO add sharing feature
+	return fmt.Sprintf("%s:%d;", "127.0.0.1", httpProxy)
 }
 
 func GetManagementAddr() string {

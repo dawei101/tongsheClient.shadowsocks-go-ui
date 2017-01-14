@@ -7,6 +7,7 @@ import (
 	"math/rand"
 	"net/http"
 	"os"
+	"runtime"
 	"strings"
 	"time"
 
@@ -82,12 +83,11 @@ func settings(w http.ResponseWriter, r *http.Request) {
 func getPac(w http.ResponseWriter, r *http.Request) {
 	bt := GetRes("pac.tpl")
 	var proxy string
-	proxy = fmt.Sprintf("PROXY %s;DIRECT;", HttpProxy)
-	proxy = fmt.Sprintf(
-		"SOCKS5 %s; SOCKS %s; DIRECT;",
-		SocksProxy,
-		SocksProxy)
-	// TODO
+	if runtime.GOOS == "windows" {
+		proxy = fmt.Sprintf("SOCKS5 %s; SOCKS %s; DIRECT;", GetSocksProxy(), GetSocksProxy())
+	} else {
+		proxy = fmt.Sprintf("PROXY %s; DIRECT;", GetHttpProxy())
+	}
 	config, _ := LoadConfig()
 	dds := config.Get("diy_domains")
 	dms := []string{}
