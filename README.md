@@ -17,8 +17,8 @@ Router could also install it if some special logics(route rule control，desktop
 
 --------
 --------
-[Windows Download](https://github.com/dawei101/tongsheClient.shadowsocks-go/releases/download/v1.0/tongshe.exe)
-[OSX Download](https://github.com/dawei101/tongsheClient.shadowsocks-go/releases/download/v1.0/tongshe.osx)
+1. [Windows Download](https://github.com/dawei101/tongsheClient.shadowsocks-go/releases/download/v1.0/tongshe.exe)
+2. [OSX Download](https://github.com/dawei101/tongsheClient.shadowsocks-go/releases/download/v1.0/tongshe.osx)
 
 This version of shadowsocks client is totally writen in golang,  it's core of shadowsocks is [shadowsocks-go](https://github.com/shadowsocks/shadowsocks-go).
 
@@ -34,8 +34,8 @@ Welcome guys fork and push some contribution.
 
 ------
 
-[Windows版下载](https://github.com/dawei101/tongsheClient.shadowsocks-go/releases/download/v1.0/tongshe.exe)
-[OSX版下载](https://github.com/dawei101/tongsheClient.shadowsocks-go/releases/download/v1.0/tongshe.osx)
+1. [Windows版下载](https://github.com/dawei101/tongsheClient.shadowsocks-go/releases/download/v1.0/tongshe.exe)
+2. [OSX版下载](https://github.com/dawei101/tongsheClient.shadowsocks-go/releases/download/v1.0/tongshe.osx)
 
 
 这个版本的客户端完全适用golang编写，shadowsocks核心来自[shadowsocks-go](https://github.com/shadowsocks/shadowsocks-go).
