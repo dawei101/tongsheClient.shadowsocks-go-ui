@@ -4,6 +4,8 @@
 
 ![image](https://cloud.githubusercontent.com/assets/2274609/21919929/dfcbb9d6-d998-11e6-8431-2143d4218e23.png)
 
+[Download](https://github.com/dawei101/tongsheClient.shadowsocks-go/releases/)
+[下载](https://github.com/dawei101/tongsheClient.shadowsocks-go/releases/)
 
 Inspired by lantern
 
@@ -16,9 +18,7 @@ Router could also install it if some special logics(route rule control，desktop
 如果对不同平台的逻辑（路由规则控制，桌面托盘控制）进行区分处理，它甚至可以装在路由器上. 如果您需要此类功能，请加入这个项目吧。
 
 --------
---------
-1. [Windows Download](https://github.com/dawei101/tongsheClient.shadowsocks-go/releases/download/v1.0/tongshe.exe)
-2. [OSX Download](https://github.com/dawei101/tongsheClient.shadowsocks-go/releases/download/v1.0/tongshe.osx)
+
 
 This version of shadowsocks client is totally writen in golang,  it's core of shadowsocks is [shadowsocks-go with traffic tracker](https://github.com/dawei101/shadowsocks-go).
 
@@ -33,10 +33,6 @@ Code is a little mess with the reason of a first time usage of golang, let's ref
 Welcome guys fork and push some contribution.
 
 ------
-
-1. [Windows版下载](https://github.com/dawei101/tongsheClient.shadowsocks-go/releases/download/v1.0/tongshe.exe)
-2. [OSX版下载](https://github.com/dawei101/tongsheClient.shadowsocks-go/releases/download/v1.0/tongshe.osx)
-
 
 这个版本的客户端完全适用golang编写，shadowsocks核心来自[带有流量追踪的 shadowsocks-go](https://github.com/dawei/shadowsocks-go).
 
