@@ -27,11 +27,9 @@ The purpose of this version is to make a way to let it easy to develop and compi
 
 This version supports Mac(osx), Windows, Linux(linux is not compiled and test)
 
-
-Code is a little mess with the reason of a first time usage of golang, let's refactor it if you think so.
-
 Welcome guys fork and push some contribution.
 
+the size of static files is a little large, this may change after replacing with dynamicly download when first run.
 ------
 
 这个版本的客户端完全适用golang编写，shadowsocks核心来自[带有流量追踪的 shadowsocks-go](https://github.com/dawei/shadowsocks-go).
@@ -40,7 +38,7 @@ Welcome guys fork and push some contribution.
 
 本版本理论上支持 Mac(osx), Windows, Linux(linux没有进行编译与测试)
 
-代码有点凌乱，因为第一次用golang出作品，大家都来重构吧。
+静态文件有点大，改成第一次运行动态下载的话，整个打包体积就很小了。
 
 欢迎大家fork并提交贡献。
 
